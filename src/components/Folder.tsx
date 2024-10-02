@@ -6,8 +6,13 @@ function Folder() {
     <>
       <div className="tab"></div>
       <div className="folder">
-        <Note />
-        <Note />
+        <div className="paper">
+          <Note />
+          <Note />
+          <Note />
+          <Note />
+          <Note />
+        </div>
       </div>
     </>
   );
