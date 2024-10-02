@@ -1,7 +1,9 @@
+import "../css/Note.css";
+
 function Note() {
   return (
-    <div style={{ width: 100, height: 100, backgroundColor: "lightblue" }}>
-      Hi from note
+    <div className="note">
+      <p>Hi from note</p>
     </div>
   );
 }

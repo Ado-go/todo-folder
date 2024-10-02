@@ -1,0 +1,12 @@
+.note {
+  width: 125px;
+  height: 140px;
+  padding: 5px;
+  border-top-left-radius: 10px;
+  background-color: lightblue;
+}
+
+p {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
