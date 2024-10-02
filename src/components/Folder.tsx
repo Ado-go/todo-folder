@@ -1,11 +1,15 @@
 import Note from "./Note";
+import "../css/Folder.css";
 
 function Folder() {
   return (
-    <div style={{ width: 500, height: 500, backgroundColor: "yellow" }}>
-      <Note />
-      <Note />
-    </div>
+    <>
+      <div className="tab"></div>
+      <div className="folder">
+        <Note />
+        <Note />
+      </div>
+    </>
   );
 }
 
