@@ -1,0 +1,14 @@
+.folder {
+  width: 450px;
+  height: 600px;
+  padding: 10px;
+  display: flex;
+  background-color: #ffeb55;
+}
+
+.tab {
+  width: 0px;
+  height: 100px;
+  border-bottom: 30px solid transparent;
+  border-right: 25px solid #ffeb55;
+}
