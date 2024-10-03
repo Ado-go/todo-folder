@@ -17,6 +17,8 @@ function Folder() {
     },
   ]);
 
+  console.log(notes);
+
   const lastNoteId =
     notes[notes.length - 1] === undefined ? 0 : notes[notes.length - 1].id;
 
@@ -32,6 +34,17 @@ function Folder() {
     });
   };
 
+  const handleContentChange = (noteId: number, newNoteContent: string) => {
+    setNotes((prev) => {
+      return prev.map((note) => {
+        if (note.id === noteId) {
+          return { ...note, content: newNoteContent };
+        }
+        return note;
+      });
+    });
+  };
+
   return (
     <>
       <div className="tab"></div>
@@ -41,8 +54,10 @@ function Folder() {
             return (
               <Note
                 key={note.id}
-                onDeleteNote={() => handleDeleteNote(note.id)}
+                id={note.id}
                 content={note.content}
+                onDeleteNote={handleDeleteNote}
+                onContentChange={handleContentChange}
               />
             );
           })}
