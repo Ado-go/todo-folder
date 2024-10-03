@@ -18,6 +18,12 @@
   border-top: 15px solid transparent;
   border-right: 15px solid coral;
   border-left: 15px solid transparent;
+  color: darkred;
+}
+
+.note-close:hover {
+  border-right: 15px solid lightcoral;
+  border-bottom: 15px solid lightcoral;
 }
 
 p {
