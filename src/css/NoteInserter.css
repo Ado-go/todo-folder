@@ -1,0 +1,22 @@
+.inserter {
+  width: 115px;
+  height: 130px;
+  padding: 5px;
+  border-radius: 10px;
+  border: dashed 5px grey;
+  color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.inserter:hover {
+  background-color: lightgray;
+}
+
+.note-add {
+  user-select: none;
+}

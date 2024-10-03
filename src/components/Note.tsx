@@ -1,9 +1,26 @@
 import "../css/Note.css";
 
-function Note() {
+function Note({
+  id,
+  content,
+  onDeleteNote,
+  onContentChange,
+}: {
+  id: number;
+  content: string;
+  onDeleteNote: (id: number) => void;
+  onContentChange: (noteId: number, newNotecontent: string) => void;
+}) {
   return (
     <div className="note">
-      <p>Hi from note</p>
+      <textarea
+        onChange={(input) => onContentChange(id, input.target.value)}
+        name="content"
+        defaultValue={content}
+      ></textarea>
+      <div onClick={() => onDeleteNote(id)} className="note-close">
+        <p>X</p>
+      </div>
     </div>
   );
 }
