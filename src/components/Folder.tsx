@@ -17,8 +17,6 @@ function Folder() {
     },
   ]);
 
-  console.log(notes);
-
   const lastNoteId =
     notes[notes.length - 1] === undefined ? 0 : notes[notes.length - 1].id;
 
