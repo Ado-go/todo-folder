@@ -26,13 +26,25 @@ function Folder() {
     });
   };
 
+  const handleDeleteNote = (idToDelete: number) => {
+    setNotes((prev) => {
+      return prev.filter((note) => note.id !== idToDelete);
+    });
+  };
+
   return (
     <>
       <div className="tab"></div>
       <div className="folder">
         <div className="paper">
           {notes.map((note) => {
-            return <Note key={note.id} />;
+            return (
+              <Note
+                key={note.id}
+                onDeleteNote={() => handleDeleteNote(note.id)}
+                content={note.content}
+              />
+            );
           })}
           {notes.length < 9 && (
             <NoteInserter onClickAddNote={handleAddNewNote} />

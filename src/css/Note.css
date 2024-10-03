@@ -4,6 +4,20 @@
   padding: 5px;
   border-top-left-radius: 10px;
   background-color: lightblue;
+  position: relative;
+}
+.note-close {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: 120px;
+  left: 105px;
+  user-select: none;
+  cursor: pointer;
+  border-bottom: 15px solid coral;
+  border-top: 15px solid transparent;
+  border-right: 15px solid coral;
+  border-left: 15px solid transparent;
 }
 
 p {

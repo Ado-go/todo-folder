@@ -1,9 +1,18 @@
 import "../css/Note.css";
 
-function Note() {
+function Note({
+  content,
+  onDeleteNote,
+}: {
+  content: string;
+  onDeleteNote: () => void;
+}) {
   return (
     <div className="note">
-      <p>Hi from note</p>
+      <p>{content}</p>
+      <div onClick={onDeleteNote} className="note-close">
+        <p>X</p>
+      </div>
     </div>
   );
 }
