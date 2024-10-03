@@ -1,21 +1,19 @@
 import Note from "./Note";
 import NoteInserter from "./NoteInserter";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import "../css/Folder.css";
 
 function Folder() {
-  const [notes, setNotes] = useState([
-    {
-      id: 1,
-      content: "hello from note",
-    },
-    {
-      id: 2,
-      content: "hello from another note",
-    },
-  ]);
+  const notesInStorage = localStorage.getItem("notes");
+  const [notes, setNotes] = useState<{ id: number; content: string }[]>(
+    notesInStorage === null ? [] : JSON.parse(notesInStorage)
+  );
+
+  useEffect(() => {
+    localStorage.setItem("notes", JSON.stringify(notes));
+  }, [notes]);
 
   const lastNoteId =
     notes[notes.length - 1] === undefined ? 0 : notes[notes.length - 1].id;
